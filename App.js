@@ -5,11 +5,18 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text
-        /* numberOfLines={1}  /*numberOfLines limita as linhas */
-        /* ellipsizeMode='head'  /*ellipsizeMode coloca reticências onde pedirmos */
+        numberOfLines={1}  /*numberOfLines limita as linhas */
+        ellipsizeMode='head'  /*ellipsizeMode coloca reticências onde pedirmos */
         selectable /* Permite ao usuário copiar o texto em questão */
-      >Open up App.js to start working on your app!</Text>
-      <TextInput placeholder='Text' style={{ borderWidth: 1, width: "80%" }} /> {/* Aqui é um inline style */}
+      >
+        Open up App.js to start working on your app!
+      </Text>
+      <TextInput
+        placeholder='Text'
+        style={{ borderWidth: 1, width: "80%" }}  /* Aqui é um inline style */
+        autoFocus /* O cursor ficará piscando ao clicar */
+        editable={false} /* Basicamente fica disabled, então o usuário não altera */
+      />
       <StatusBar style="auto" />
     </View>
   );
